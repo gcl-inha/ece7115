@@ -4,72 +4,53 @@ hide:
   - toc
 ---
 
-# {{ config.site_name }}
-At the Generative Computing Lab (GCL), we build human-centric solutions to make Generative AI more accessible and impactful for both the public and expert professionals. Above all, we prioritize the responsible use of Generative AI, developing robust frameworks to safeguard data security and ensure ethical deployment.
+# ECE7115 Multimodal VLM (LLM)
 
-<!-- Link Swiper's CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<div class="course-subtitle">Inha University · Spring 2026</div>
 
-<!-- Research Highlights -->
-<div class="swiper research-highlights-swiper" markdown>
+<div class="course-description" markdown>
 
-## Research Highlights
-<div class="swiper-wrapper" markdown>
+This course provides an in-depth study of Large Language Models (LLMs) — the essential foundation for understanding Multimodal Vision-Language Models.
+Topics include LLM architectures, training/inference pipelines, GPU systems, and post-training methods such as RLHF and RLVR. (but I will not provide VLM-related topcis, sorry!) <br>
+Note: This course is built upon [Stanford CS336](https://cs336.stanford.edu).
 
-{% for paper in research_highlights %}
-<div class="swiper-slide" markdown>
-
-<a href="{{ paper.link }}" target=_blank>
-<div class="card" markdown>
-<center>
-<img src="/assets/highlights/{{ paper.key }}.png" markdown>
-<b>{{ paper.title }} ({{ paper.venue }})</b><br>
-<span class="fg-color-dark">{{ paper.desc }}</span><br>
-</center>
-</div>
-</a>
+**Instructor:** [Namhyuk Ahn](https://nmhkahn.github.io) (School of Electrical and Electronic Engineering, Inha University)
 
 </div>
-{% endfor %}
 
-</div>
-<div class="swiper-pagination"></div>
-</div>
-
-
-<div class="container" markdown>
-<!-- News -->
-<div class="news" markdown>
-<h2><a class="fg-color-dark" href="news/">GCL News</a></h2>
-{% for item in news %}
-{% if loop.index <= 5 %}
-<div class="news-entry">
-  <div class="news-time">{{ item.time }}</div>
-  <div class="news-title">{{ item.title }}</div>
-</div>
+### Schedule & Lecture Materials
+Note: We provide lecture videos in Korean only.
+<div class="schedule-table">
+<table class="schedule">
+  <thead>
+    <tr>
+      <th class="schedule-date">날짜</th>
+      <th class="schedule-desc">내용</th>
+      <th class="schedule-slides">Slides</th>
+      <th class="schedule-youtube">YouTube</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for item in schedule %}
+    <tr>
+      <td class="schedule-date">{{ item.date }}</td>
+{% if item.description_ko is defined and item.description_ko %}
+      <td class="schedule-desc">{{ item.description_ko }}</td>
+      <td class="schedule-slides"></td>
+      <td class="schedule-youtube"></td>
+{% else %}
+      <td class="schedule-desc">
+<span class="lecture-title">{{ item.title_ko }}</span>{% for d in item.details_ko %}<br>- {{ d }}{% endfor %}
+      </td>
+      <td class="schedule-slides">
+{% for s in item.slides %}{% if s.url %}<a href="{{ s.url }}" target="_blank">{{ s.title }}</a>{% endif %}{% if not loop.last %}<br>{% endif %}{% endfor %}
+      </td>
+      <td class="schedule-youtube">
+{% for vid in item.videos %}{% if vid.youtube %}<a href="{{ vid.youtube }}" target="_blank">{{ vid.title }}</a>{% endif %}{% if not loop.last %}<br>{% endif %}{% endfor %}
+      </td>
 {% endif %}
+    </tr>
 {% endfor %}
+  </tbody>
+</table>
 </div>
-</div>
-
-<br><br>
-
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-var swiper = new Swiper(".research-highlights-swiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
-</script>

@@ -1,11 +1,9 @@
-site_name: Generative Computing Lab
-site_url: https://gcl-inha.github.io
+site_name: ECE7115 Multimodal VLM (LLM)
+site_url: https://gcl-inha.github.io/ece7115
 theme:
   name: material
   custom_dir: overrides
-  features:
-    - navigation.tabs
-    - navigation.tabs.sticky
+  features: []
   font:
     text: Montserrat
   primary: custom
@@ -14,21 +12,16 @@ theme:
 
 nav:
   - Home: index.md
-  - People: people.md
-  - Research: research.md
-  - Publications: publications.md
-  - Projects: projects.md
-  - Join Us: join-us.md
 
 extra_css:
   - stylesheets/extra.css
 
-markdown_extensions: 
+markdown_extensions:
   - attr_list
   - md_in_html
   - tables
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       options:
         custom_icons:
@@ -40,12 +33,13 @@ markdown_extensions:
   - pymdownx.tilde
 
 extra:
+  homepage: https://gcl-inha.github.io
   alternate:
     - name: 🇰🇷 <span class="lg-txt">한국어</span>
-      link: /
+      link: /ece7115/
       lang: ko
     - name: 🇺🇸 <span class="lg-txt">English</span>
-      link: /en/
+      link: /ece7115/en/
       lang: en
 
 plugins:
@@ -61,10 +55,6 @@ plugins:
           build: true
   - macros:
       include_yaml:
-        - people: data/people.yml
-        - publications: data/publications.yml
-        - research_highlights: data/research_highlights.yml
-        - news: data/news.yml
-        - projects: data/projects.yml
+        - schedule: data/schedule.yml
 
 copyright: Copyright &copy; 2025 -  Generative Computing Lab at Inha University

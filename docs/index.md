@@ -4,72 +4,51 @@ hide:
   - toc
 ---
 
-# {{ config.site_name }}
-인하대학교 생성컴퓨팅 연구실은 일반 사용자부터 분야별 전문가에 이르기까지, 누구나 생성형 AI의 혜택을 누릴 수 있도록 접근성과 사회적 효용을 극대화한 인간 중심의 기술을 연구합니다. 나아가 생성형 AI의 책임감 있는 발전을 위해 데이터 보안과 윤리적 가치를 보장하는 신뢰 시스템 구축에 주력하고 있습니다.
+# ECE7115 Multimodal VLM (LLM)
 
-<!-- Link Swiper's CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<div class="course-subtitle">인하대학교 · 2026년 봄학기</div>
 
-<!-- Research Highlights -->
-<div class="swiper research-highlights-swiper" markdown>
+<div class="course-description" markdown>
 
-## Research Highlights
-<div class="swiper-wrapper" markdown>
+본 강의는 Multimodal VLM을 이해하기 위한 핵심 기반인 대규모 언어 모델(Large Language Model; LLM)을 심도 있게 다룹니다.
+Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인, GPU 시스템, RL 기반 사후 학습까지 LLM의 기초부터 최신 기술을 학습합니다. (강의 이름과 다르게 VLM 내용은 다루지 않습니다!) <br>
+참고: 본 강의는 [Stanford CS336](https://cs336.stanford.edu)을 기반으로 구성되었습니다.
 
-{% for paper in research_highlights %}
-<div class="swiper-slide" markdown>
-
-<a href="{{ paper.link }}" target=_blank>
-<div class="card" markdown>
-<center>
-<img src="/assets/highlights/{{ paper.key }}.png" markdown>
-<b>{{ paper.title }} ({{ paper.venue }})</b><br>
-<span class="fg-color-dark">{{ paper.desc_ko }}</span><br>
-</center>
-</div>
-</a>
-
-</div>
-{% endfor %}
-
-</div>
-<div class="swiper-pagination"></div>
+**강의자:** [안남혁](https://nmhkahn.github.io) (인하대학교 전기전자공학부)
 </div>
 
-
-<div class="container" markdown>
-<!-- News -->
-<div class="news" markdown>
-<h2><a class="fg-color-dark" href="news/">GCL News</a></h2>
-{% for item in news %}
-{% if loop.index <= 5 %}
-<div class="news-entry">
-  <div class="news-time">{{ item.time }}</div>
-  <div class="news-title">{{ item.title }}</div>
-</div>
+### 강의 스케쥴 & 자료
+<div class="schedule-table">
+<table class="schedule">
+  <thead>
+    <tr>
+      <th class="schedule-date">날짜</th>
+      <th class="schedule-desc">내용</th>
+      <th class="schedule-slides">Slides</th>
+      <th class="schedule-youtube">YouTube</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for item in schedule %}
+    <tr>
+      <td class="schedule-date">{{ item.date }}</td>
+{% if item.description_ko is defined and item.description_ko %}
+      <td class="schedule-desc">{{ item.description_ko }}</td>
+      <td class="schedule-slides"></td>
+      <td class="schedule-youtube"></td>
+{% else %}
+      <td class="schedule-desc">
+<span class="lecture-title">{{ item.title_ko }}</span>{% for d in item.details_ko %}<br>- {{ d }}{% endfor %}
+      </td>
+      <td class="schedule-slides">
+{% for s in item.slides %}{% if s.url %}<a href="{{ s.url }}" target="_blank">{{ s.title }}</a>{% endif %}{% if not loop.last %}<br>{% endif %}{% endfor %}
+      </td>
+      <td class="schedule-youtube">
+{% for vid in item.videos %}{% if vid.youtube %}<a href="{{ vid.youtube }}" target="_blank">{{ vid.title }}</a>{% endif %}{% if not loop.last %}<br>{% endif %}{% endfor %}
+      </td>
 {% endif %}
+    </tr>
 {% endfor %}
+  </tbody>
+</table>
 </div>
-</div>
-
-<br><br>
-
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-var swiper = new Swiper(".research-highlights-swiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
-</script>
