@@ -56,6 +56,19 @@
 
     
     
+
+
+<script>
+(function() {
+  if (localStorage.getItem('ece7115_lang_chosen')) return;
+  var lang = navigator.language || navigator.userLanguage || '';
+  if (!lang.startsWith('ko')) {
+    window.location.replace(window.location.pathname.replace(/\/$/, '').replace(/\/ece7115.*/, '/ece7115/en/'));
+  }
+})();
+</script>
+
+
   </head>
   
   
@@ -128,13 +141,15 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="/ece7115/" hreflang="ko" class="md-select__link">
+            <a href="/ece7115/" hreflang="ko" class="md-select__link"
+               onclick="localStorage.setItem('ece7115_lang_chosen','1')">
               🇰🇷 <span class="lg-txt">한국어</span>
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="/ece7115/en/" hreflang="en" class="md-select__link">
+            <a href="/ece7115/en/" hreflang="en" class="md-select__link"
+               onclick="localStorage.setItem('ece7115_lang_chosen','1')">
               🇺🇸 <span class="lg-txt">English</span>
             </a>
           </li>
@@ -351,7 +366,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
     <tr>
       <td class="schedule-date">3/2</td>
 
-      <td class="schedule-desc">공휴일 (휴강)</td>
+      <td class="schedule-desc">No class (National holiday)</td>
       <td class="schedule-slides"></td>
       <td class="schedule-youtube"></td>
 
@@ -360,7 +375,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
     <tr>
       <td class="schedule-date">3/9</td>
 
-      <td class="schedule-desc">휴강</td>
+      <td class="schedule-desc">No class</td>
       <td class="schedule-slides"></td>
       <td class="schedule-youtube"></td>
 
@@ -370,13 +385,13 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">3/16</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 1. Introduction + Transformer</span><br>- Course introduction<br>- Resource accounting<br>- Transformer
+<span class="lecture-title">Week 1. Introduction + Transformer</span><br>- Course introduction<br>- Resource accounting<br>- Transformer
       </td>
       <td class="schedule-slides">
-<a href="./slides/0_course_introduction.pdf" target="_blank">0. Course Introduction</a><br><a href="./slides/1_resource_accounting.pdf" target="_blank">1. Resource accounting</a><br><a href="./slides/2_basics_transformer.pdf" target="_blank">2. Transformer</a>
+<a href="./slides/0_course_introduction.pdf" target="_blank">[Slide 0] Course Introduction</a><br><a href="./slides/1_resource_accounting.pdf" target="_blank">[Slide 1] Resource accounting</a><br><a href="./slides/2_basics_transformer.pdf" target="_blank">[Slide 2] Transformer</a>
       </td>
       <td class="schedule-youtube">
-<a href="https://youtu.be/GPIUVGExOp0" target="_blank">1. Course Introduction + Resource accounting</a><br><a href="https://youtu.be/DNCjiIZNF4Q" target="_blank">2. Transformer</a>
+<a href="https://youtu.be/GPIUVGExOp0" target="_blank">[Video 1] Course Introduction + Resource accounting</a><br><a href="https://youtu.be/DNCjiIZNF4Q" target="_blank">[Video 2] Transformer</a>
       </td>
 
     </tr>
@@ -385,13 +400,13 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">3/23</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 2. LLM Basics</span><br>- Pre-training<br>- Post-training<br>- Fine-tuning, Prompting
+<span class="lecture-title">Week 2. LLM Basics</span><br>- Pre-training<br>- Post-training<br>- Fine-tuning, Prompting
       </td>
       <td class="schedule-slides">
-<a href="./slides/4_llm_basics" target="_blank">3. LLM Basics</a>
+<a href="./slides/3_basics_llm.pdf" target="_blank">[Slide 3] LLM Basics</a>
       </td>
       <td class="schedule-youtube">
-<a href="https://youtu.be/0iq85y-ZHn8" target="_blank">3. LLM Basics (1)</a><br><a href="https://youtu.be/CKgMirP_bLE" target="_blank">4. LLM Basics (2)</a>
+<a href="https://youtu.be/0iq85y-ZHn8" target="_blank">[Video 3] LLM Basics (1)</a><br><a href="https://youtu.be/rW6FyKHBmyk" target="_blank">[Video 4] LLM Basics (2)</a>
       </td>
 
     </tr>
@@ -400,13 +415,13 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">3/30</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 3. LLM architecture (1)</span><br>- Modern LLM models<br>- Attention variants
+<span class="lecture-title">Week 3. LLM Architecture (1)</span><br>- Modern LLM models<br>- Attention variants
       </td>
       <td class="schedule-slides">
-
+<a href="./slides/4_modern_llm_architecture.pdf" target="_blank">[Slide 4] Modern LLM Architecture</a>
       </td>
       <td class="schedule-youtube">
-
+<a href="https://youtu.be/fQwCVeFFW6U" target="_blank">[Video  5] Modern LLM Architecture</a><br><a href="https://youtu.be/lQyGuCzEuI4" target="_blank">[Video  6] Attention Variants: MQA, GQA, MLA</a>
       </td>
 
     </tr>
@@ -415,10 +430,10 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">4/6</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 4. LLM Architecture (2)</span><br>- Mixture-of-experts<br>- Scaling Laws
+<span class="lecture-title">Week 4. LLM Architecture (2)</span><br>- Mixture-of-experts<br>- Scaling Laws
       </td>
       <td class="schedule-slides">
-
+<a href="./slides/5_moe.pdf" target="_blank">[Slide 5] Mixture-of-Experts</a><br><a href="./slides/6_scaling_laws.pdf" target="_blank">[Slide 6] Scaling Laws</a>
       </td>
       <td class="schedule-youtube">
 
@@ -430,7 +445,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">4/13</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 5. LLM Case Study</span><br>- Recent model architectures
+<span class="lecture-title">Week 5. LLM Case Study</span><br>- Recent model architectures
       </td>
       <td class="schedule-slides">
 
@@ -445,7 +460,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">4/20</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 6. GPUs</span><br>- Understanding GPUs<br>- FlashAttention
+<span class="lecture-title">Week 6. GPUs</span><br>- Understanding GPUs<br>- FlashAttention
       </td>
       <td class="schedule-slides">
 
@@ -460,7 +475,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">4/27</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 7. Parallelism</span><br>- Data parallel<br>- Model parallel<br>- Activation parallel
+<span class="lecture-title">Week 7. Parallelism</span><br>- Data parallel<br>- Model parallel<br>- Activation parallel
       </td>
       <td class="schedule-slides">
 
@@ -475,7 +490,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">5/4</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 8. Inference + Evaluation & Datasets</span><br>- Inference Cost<br>- Inference technique<br>- Evaluation metrics<br>- Training dataset
+<span class="lecture-title">Week 8. Inference + Evaluation & Datasets</span><br>- Inference Cost<br>- Inference technique<br>- Evaluation metrics<br>- Training dataset
       </td>
       <td class="schedule-slides">
 
@@ -490,7 +505,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">5/11</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 9. Post-training (1)</span><br>- Supervised fine-tuning<br>- Introduction to RL (Policy-based, Actor-critic, A2C, PPO)
+<span class="lecture-title">Week 9. Post-training (1)</span><br>- Supervised fine-tuning<br>- Introduction to RL (Policy-based, Actor-critic, A2C, PPO)
       </td>
       <td class="schedule-slides">
 
@@ -505,7 +520,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">5/18</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 10. Post-training (2)</span><br>- RL from human feedback
+<span class="lecture-title">Week 10. Post-training (2)</span><br>- RL from human feedback
       </td>
       <td class="schedule-slides">
 
@@ -519,7 +534,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
     <tr>
       <td class="schedule-date">5/25</td>
 
-      <td class="schedule-desc">공휴일 (휴강)</td>
+      <td class="schedule-desc">No class (National holiday)</td>
       <td class="schedule-slides"></td>
       <td class="schedule-youtube"></td>
 
@@ -529,7 +544,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">6/1</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 11. Post-training (3)</span><br>- RL with verifiable rewards<br>- LLM Case Study
+<span class="lecture-title">Week 11. Post-training (3)</span><br>- RL with verifiable rewards<br>- LLM Case Study
       </td>
       <td class="schedule-slides">
 
@@ -544,7 +559,7 @@ Transformer부터 최신 LLM 모델 아키텍처, 학습/추론 파이프라인,
       <td class="schedule-date">6/8</td>
 
       <td class="schedule-desc">
-<span class="lecture-title">Lecture 12. Reasoning</span><br>- Chain-of-thought<br>- System 1, 2<br>- Reasoning systems<br>- Agent systems
+<span class="lecture-title">Week 12. Reasoning</span><br>- Chain-of-thought<br>- System 1, 2<br>- Reasoning systems<br>- Agent systems
       </td>
       <td class="schedule-slides">
 
