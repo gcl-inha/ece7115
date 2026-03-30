@@ -14,7 +14,8 @@
       <ul class="md-select__list">
         {% for alt in config.extra.alternate %}
           <li class="md-select__item">
-            <a href="{{ alt.link | url }}" hreflang="{{ alt.lang }}" class="md-select__link">
+            <a href="{{ alt.link | url }}" hreflang="{{ alt.lang }}" class="md-select__link"
+               onclick="localStorage.setItem('ece7115_lang_chosen','1')">
               {{ alt.name | safe }}
             </a>
           </li>

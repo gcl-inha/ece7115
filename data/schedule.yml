@@ -1,111 +1,89 @@
 - date: "3/2"
-  description_ko: "공휴일 (휴강)"
-  description_en: "No class (National holiday)"
+  description_ko: "No class (National holiday)"
   videos: []
 
 - date: "3/9"
-  description_ko: "휴강"
-  description_en: "No class"
+  description_ko: "No class"
   videos: []
 
 - date: "3/16"
-  title_ko: "Lecture 1. Introduction + Transformer"
-  title_en: "Lecture 1. Introduction + Transformer"
+  title_ko: "Week 1. Introduction + Transformer"
   details_ko:
     - "Course introduction"
     - "Resource accounting"
     - "Transformer"
-  details_en:
-    - "Course introduction"
-    - "Resource accounting"
-    - "Transformer"
   slides:
-    - title: "0. Course Introduction"
+    - title: "[Slide 0] Course Introduction"
       url: "./slides/0_course_introduction.pdf"
-    - title: "1. Resource accounting"
+    - title: "[Slide 1] Resource accounting"
       url: "./slides/1_resource_accounting.pdf"
-    - title: "2. Transformer"
+    - title: "[Slide 2] Transformer"
       url: "./slides/2_basics_transformer.pdf"
   videos:
-    - title: "1. Course Introduction + Resource accounting"
+    - title: "[Video 1] Course Introduction + Resource accounting"
       youtube: "https://youtu.be/GPIUVGExOp0"
-    - title: "2. Transformer"
+    - title: "[Video 2] Transformer"
       youtube: "https://youtu.be/DNCjiIZNF4Q"
 
 - date: "3/23"
-  title_ko: "Lecture 2. LLM Basics"
-  title_en: "Lecture 2. LLM Basics"
+  title_ko: "Week 2. LLM Basics"
   details_ko:
-    - "Pre-training"
-    - "Post-training"
-    - "Fine-tuning, Prompting"
-  details_en:
     - "Pre-training"
     - "Post-training"
     - "Fine-tuning, Prompting"
   slides:
-    - title: "3. LLM Basics"
-      url: "./slides/4_llm_basics"
+    - title: "[Slide 3] LLM Basics"
+      url: "./slides/3_basics_llm.pdf"
   videos:
-    - title: "3. LLM Basics (1)"
+    - title: "[Video 3] LLM Basics (1)"
       youtube: "https://youtu.be/0iq85y-ZHn8"
-    - title: "4. LLM Basics (2)"
-      youtube: "https://youtu.be/CKgMirP_bLE"
+    - title: "[Video 4] LLM Basics (2)"
+      youtube: "https://youtu.be/rW6FyKHBmyk"
 
 - date: "3/30"
-  title_ko: "Lecture 3. LLM architecture (1)"
-  title_en: "Lecture 3. LLM architecture (1)"
+  title_ko: "Week 3. LLM Architecture (1)"
   details_ko:
     - "Modern LLM models"
     - "Attention variants"
-  details_en:
-    - "Modern LLM models"
-    - "Attention variants"
-  slides: []
-  videos: []
+  slides:
+    - title: "[Slide 4] Modern LLM Architecture"
+      url: "./slides/4_modern_llm_architecture.pdf"
+  videos:
+    - title: "[Video  5] Modern LLM Architecture"
+      youtube: "https://youtu.be/fQwCVeFFW6U"
+    - title: "[Video  6] Attention Variants: MQA, GQA, MLA"
+      youtube: "https://youtu.be/lQyGuCzEuI4"
 
 - date: "4/6"
-  title_ko: "Lecture 4. LLM Architecture (2)"
-  title_en: "Lecture 4. LLM Architecture (2)"
+  title_ko: "Week 4. LLM Architecture (2)"
   details_ko:
     - "Mixture-of-experts"
     - "Scaling Laws"
-  details_en:
-    - "Mixture-of-experts"
-    - "Scaling Laws"
-  slides: []
+  slides:
+    - title: "[Slide 5] Mixture-of-Experts"
+      url: "./slides/5_moe.pdf"
+    - title: "[Slide 6] Scaling Laws"
+      url: "./slides/6_scaling_laws.pdf"
   videos: []
 
 - date: "4/13"
-  title_ko: "Lecture 5. LLM Case Study"
-  title_en: "Lecture 5. LLM Case Study"
+  title_ko: "Week 5. LLM Case Study"
   details_ko:
-    - "Recent model architectures"
-  details_en:
     - "Recent model architectures"
   slides: []
   videos: []
 
 - date: "4/20"
-  title_ko: "Lecture 6. GPUs"
-  title_en: "Lecture 6. GPUs"
+  title_ko: "Week 6. GPUs"
   details_ko:
-    - "Understanding GPUs"
-    - "FlashAttention"
-  details_en:
     - "Understanding GPUs"
     - "FlashAttention"
   slides: []
   videos: []
 
 - date: "4/27"
-  title_ko: "Lecture 7. Parallelism"
-  title_en: "Lecture 7. Parallelism"
+  title_ko: "Week 7. Parallelism"
   details_ko:
-    - "Data parallel"
-    - "Model parallel"
-    - "Activation parallel"
-  details_en:
     - "Data parallel"
     - "Model parallel"
     - "Activation parallel"
@@ -113,14 +91,8 @@
   videos: []
 
 - date: "5/4"
-  title_ko: "Lecture 8. Inference + Evaluation & Datasets"
-  title_en: "Lecture 8. Inference + Evaluation & Datasets"
+  title_ko: "Week 8. Inference + Evaluation & Datasets"
   details_ko:
-    - "Inference Cost"
-    - "Inference technique"
-    - "Evaluation metrics"
-    - "Training dataset"
-  details_en:
     - "Inference Cost"
     - "Inference technique"
     - "Evaluation metrics"
@@ -129,53 +101,35 @@
   videos: []
 
 - date: "5/11"
-  title_ko: "Lecture 9. Post-training (1)"
-  title_en: "Lecture 9. Post-training (1)"
+  title_ko: "Week 9. Post-training (1)"
   details_ko:
-    - "Supervised fine-tuning"
-    - "Introduction to RL (Policy-based, Actor-critic, A2C, PPO)"
-  details_en:
     - "Supervised fine-tuning"
     - "Introduction to RL (Policy-based, Actor-critic, A2C, PPO)"
   slides: []
   videos: []
 
 - date: "5/18"
-  title_ko: "Lecture 10. Post-training (2)"
-  title_en: "Lecture 10. Post-training (2)"
+  title_ko: "Week 10. Post-training (2)"
   details_ko:
-    - "RL from human feedback"
-  details_en:
     - "RL from human feedback"
   slides: []
   videos: []
 
 - date: "5/25"
-  description_ko: "공휴일 (휴강)"
-  description_en: "No class (National holiday)"
+  description_ko: "No class (National holiday)"
   videos: []
 
 - date: "6/1"
-  title_ko: "Lecture 11. Post-training (3)"
-  title_en: "Lecture 11. Post-training (3)"
+  title_ko: "Week 11. Post-training (3)"
   details_ko:
-    - "RL with verifiable rewards"
-    - "LLM Case Study"
-  details_en:
     - "RL with verifiable rewards"
     - "LLM Case Study"
   slides: []
   videos: []
 
 - date: "6/8"
-  title_ko: "Lecture 12. Reasoning"
-  title_en: "Lecture 12. Reasoning"
+  title_ko: "Week 12. Reasoning"
   details_ko:
-    - "Chain-of-thought"
-    - "System 1, 2"
-    - "Reasoning systems"
-    - "Agent systems"
-  details_en:
     - "Chain-of-thought"
     - "System 1, 2"
     - "Reasoning systems"

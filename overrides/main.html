@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{{ super() }}
+{% if i18n_page_locale == 'ko' %}
+<script>
+(function() {
+  if (localStorage.getItem('ece7115_lang_chosen')) return;
+  var lang = navigator.language || navigator.userLanguage || '';
+  if (!lang.startsWith('ko')) {
+    window.location.replace(window.location.pathname.replace(/\/$/, '').replace(/\/ece7115.*/, '/ece7115/en/'));
+  }
+})();
+</script>
+{% endif %}
+{% endblock %}
