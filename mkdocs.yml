@@ -1,4 +1,4 @@
-site_name: ECE7115 Multimodal VLM (LLM)
+site_name: Large Language Models Course @ Inha University
 site_url: https://gcl-inha.github.io/ece7115
 theme:
   name: material

@@ -93,7 +93,9 @@
   slides:
     - title: "8. Understanding GPUs"
       url: "./slides/8_understanding_gpus.pdf"
-  videos: []
+  videos:
+    - title: "8. Understanding GPUs & FlashAttention"
+      youtube: "https://youtu.be/sGYFp-6GE3g"
 
 - date: "5/4"
   title_ko: "Week 7. Parallelism"
@@ -102,23 +104,37 @@
   slides:
     - title: "9. Parallelism"
       url: "./slides/9_parallelism.pdf"
-  videos: []
+  videos:
+    - title: "9. Parallelism"
+      youtube: "https://youtu.be/7HVaQ2aZfbo"
 
 - date: "5/11"
   title_ko: "Week 8. Inference, Evaluation"
   details_ko:
     - "Inference cost & techniques"
     - "Evaluation metrics"
-  slides: []
-  videos: []
+  slides:
+    - title: "10. Inference"
+      url: "./slides/10_inference.pdf"
+    - title: "11. Evaluation"
+      url: "./slides/11_evaluation.pdf"
+  videos:
+    - title: "10. Inference"
+      youtube: "https://youtu.be/Y0hjYViYvp0"
+    - title: "11. Evaluation"
+      youtube: "https://youtu.be/ABjp3EF3ffE"
 
 - date: "5/18"
   title_ko: "Week 9. Dataset, SFT"
   details_ko:
     - "Training dataset"
     - "Supervised fine-tuning"
-  slides: []
-  videos: []
+  slides:
+    - title: "12. Dataset & SFT"
+      url: "./slides/12_dataset_and_sft.pdf"
+  videos:
+    - title: "12. Dataset & SFT"
+      youtube: "https://youtu.be/7SLdQC4lWV0"
 
 - date: "5/25"
   description_ko: "No Class (National Holiday)"
@@ -129,21 +145,34 @@
   details_ko:
     - "Introduction to RL"
     - "RL from human feedback"
-  slides: []
-  videos: []
+  slides:
+    - title: "13. RLHF"
+      url: "./slides/13_rlhf.pdf"
+  videos:
+    - title: "13. RLHF"
+      youtube: "https://youtu.be/W6gC_R5_eVo"
 
 - date: "6/8"
   title_ko: "Week 11. Reasoning"
   details_ko:
-    - "Training-free reasoning"
-    - "Training reasoning (RL with verifiable rewards)"
-  slides: []
-  videos: []
+    - "Reasoning without Training"
+    - "Training reasoning (RLVR)"
+  slides:
+    - title: "14. Reasoning"
+      url: "./slides/14_reasoning.pdf"
+  videos:
+    - title: "14. Reasoning"
+      youtube: "https://youtu.be/9tFXPslRT10"
 
 - date: "6/15"
-  title_ko: "Week 12. Tool & Agent, Case Study"
+  title_ko: "Week 12. Modern Post-Training"
   details_ko:
-    - "Tool use, multi-agent"
-    - "Case study on post-training"
-  slides: []
-  videos: []
+    - "Synthetic dataset"
+    - "Agentic system"
+    - "Modern post-training"
+  slides:
+    - title: "15.  Modern Post-Training"
+      url: "./slides/15_modern_post_training.pdf"
+  videos:
+    - title: "15.  Modern Post-Training"
+      youtube: "https://youtu.be/6aqz3F_ZzBU"

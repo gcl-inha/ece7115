@@ -4,16 +4,12 @@ hide:
   - toc
 ---
 
-# ECE7115 Multimodal VLM (LLM)
+# Large Language Models Course
 
 <div class="course-subtitle">Inha University · Spring 2026</div>
-
 <div class="course-description" markdown>
-
-This course provides an in-depth study of Large Language Models (LLMs) — the essential foundation for understanding Multimodal Vision-Language Models.
-Topics include LLM architectures, training/inference pipelines, GPU systems, and post-training methods such as RLHF and RLVR. (but I will not provide VLM-related topcis, sorry!) <br>
-Note: This course is built upon [Stanford CS336](https://cs336.stanford.edu).
-
+This course covers large language models (LLMs) in a broad and systematic way. We will study the key topics needed to understand LLMs, including LLM architectures, training and inference, GPU systems, and RL-based post-training.<br>
+Note: The official course title at Inha University is Multimodal VLM (ECE7115), but the actual course content is centered on LLMs.<br>
 **Instructor:** [Namhyuk Ahn](https://nmhkahn.github.io) (School of Electrical and Electronic Engineering, Inha University)
 
 </div>
