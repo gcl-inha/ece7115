@@ -39,7 +39,7 @@ Note: We provide lecture videos in Korean only.
 <span class="lecture-title">{{ item.title_ko }}</span>{% for d in item.details_ko %}<br>- {{ d }}{% endfor %}
       </td>
       <td class="schedule-slides">
-{% for s in item.slides %}{% if s.url %}<a href="{{ s.url }}" target="_blank">{{ s.title }}</a>{% endif %}{% if not loop.last %}<br>{% endif %}{% endfor %}
+{% for s in item.slides %}{% if s.url %}<a href="{{ s.url | replace('./', '../') }}" target="_blank">{{ s.title }}</a>{% endif %}{% if not loop.last %}<br>{% endif %}{% endfor %}
       </td>
       <td class="schedule-youtube">
 {% for vid in item.videos %}{% if vid.youtube %}<a href="{{ vid.youtube }}" target="_blank">{{ vid.title }}</a>{% endif %}{% if not loop.last %}<br>{% endif %}{% endfor %}
